@@ -1,0 +1,333 @@
+@import url("https://instantui.netlify.app/assets/main.css");
+
+/* colors */
+
+:root {
+  --teal-color: #198d98;
+  --teal-dark-color: #1dabb8;
+  --white-color: #fff;
+  --bg-color: #e5e5e5;
+  --dark-color: linear-gradient(var(--teal-color), var(--teal-dark-color));
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* helpers/align.css */
+
+.align {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+}
+
+/* helpers/grid.css */
+
+:root {
+  --gridMaxWidth: 24em;
+  --gridWidth: 90%;
+}
+
+.grid {
+  width: 100%;
+  width: var(--gridWidth);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 24em;
+  max-width: var(--gridMaxWidth);
+}
+
+/* helpers/icon.css */
+
+.icon {
+  height: 1.25em;
+  display: inline-block;
+  width: 1.25em;
+  line-height: 1.25em;
+  margin-right: 0.625em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon--info {
+  background-color: var(--bg-color);
+  border-radius: 50%;
+}
+
+/* layout/base.css */
+
+:root {
+  --bodyBackgroundColor: #eaeaea;
+  --bodyColor: #999;
+  --bodyFontFamily: "Helvetica", "Arial";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.align {
+  background-color: #eaeaea;
+  background-color: var(--bodyBackgroundColor);
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: 0.875rem;
+  font-size: var(--bodyFontSize);
+  font-weight: 400;
+  font-weight: var(--bodyFontWeight);
+  line-height: 1.5;
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* modules/form.css */
+
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+form {
+  background: var(--white-color);
+}
+
+.form input {
+  width: 100%;
+}
+
+/* modules/login.css */
+
+:root {
+  --loginBorderRadius: 0.25em;
+  --loginHeaderBackgroundColor: #131313;
+
+  --loginInputBorderRadius: 0.25em;
+}
+
+.login__header {
+  background-color: var(--loginHeaderBackgroundColor);
+  background-image: var(--dark-color);
+  border-top-left-radius: 0.25em;
+  border-top-left-radius: var(--loginBorderRadius);
+  border-top-right-radius: 0.25em;
+  border-top-right-radius: var(--loginBorderRadius);
+  color: var(--white-color);
+  padding: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.login__body {
+  background-color: var(--white-color);
+  padding: 1em;
+  margin: 0.5em;
+  position: relative;
+  border-radius: 2px;
+}
+
+.login__body[draggable="true"] {
+  padding-top: 0.4rem;
+  margin: 1rem;
+  border: 2px dashed rgb(228, 222, 222);
+  cursor: pointer;
+}
+
+.login__body:first-of-type {
+  margin-top: 2rem;
+}
+
+.login__body:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.login__body {
+  transition: 0.5s all ease;
+  overflow: hidden;
+}
+
+.login__body.display-none {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+.login__body.display-none * {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.login__body.dragging-item {
+  background: #c1c4c3;
+  height: 150px;
+}
+
+.login__body.dragging-item * {
+  opacity: 0;
+  display: none;
+}
+
+/* .arrow:not(.dragging-item)::before {
+  background-color: var(--white-color);
+  content: "";
+  height: 0.5em;
+  left: 50%;
+  margin-left: -0.25em;
+  margin-top: -0.25em;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.5em;
+} */
+
+.hr {
+  position: relative;
+  background: var(--white-color);
+  height: 20px;
+}
+.hr span {
+  background: var(--white-color);
+  padding: 0 1rem;
+  position: relative;
+  color: rgb(70, 70, 70);
+  z-index: 1;
+}
+hr {
+  position: absolute;
+  border: 1px dashed rgb(177, 176, 176);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+
+.login input {
+  border: 0.0625em solid #e5e5e5;
+  padding: 1em 1.25em;
+}
+
+.login input {
+  border-top-left-radius: 0.25em;
+  border-top-left-radius: var(--loginInputBorderRadius);
+  border-top-right-radius: 0.25em;
+  border-top-right-radius: var(--loginInputBorderRadius);
+}
+
+.login input[type="password"] {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-left-radius: var(--loginInputBorderRadius);
+  border-bottom-right-radius: 0.25em;
+  border-bottom-right-radius: var(--loginInputBorderRadius);
+  border-top: 0;
+}
+
+.login button {
+  background-color: #1dabb8;
+  border: none;
+  border-radius: 0.25em;
+  border-radius: var(--loginInputBorderRadius);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 500;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0.75em 1.25em;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.login button:focus,
+.login button:hover {
+  background-color: var(--teal-color);
+}
+
+.login__footer {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-bottom-left-radius: 0.25em;
+  border-bottom-left-radius: var(--loginBorderRadius);
+  border-bottom-right-radius: 0.25em;
+  border-bottom-right-radius: var(--loginBorderRadius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.login__footer p {
+  margin: 0;
+}
+
+.checkboxes {
+  background: var(--white-color);
+  padding: 1rem;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 0.3em;
+  margin: 2rem auto;
+}
+
+.choose-text {
+  font-size: 2rem;
+  color: rgb(172, 172, 172);
+  margin: 3rem 0;
+  overflow: hidden;
+  transition: 0.5s all ease;
+}
+
+.choose-text.not-visible {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
