@@ -17,14 +17,14 @@
 
 /* helpers/align.css */
 
-.align {
+/* .align {
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
   place-items: center;
-}
+} */
 
 /* helpers/grid.css */
 
@@ -83,7 +83,7 @@ html {
   box-sizing: border-box;
 }
 
-.align {
+/* .align {
   background-color: #eaeaea;
   background-color: var(--bodyBackgroundColor);
   font-family: "Helvetica", "Arial", sans-serif;
@@ -96,7 +96,7 @@ html {
   line-height: var(--bodyLineHeight);
   margin: 0;
   min-height: 100vh;
-}
+} */
 
 /* modules/form.css */
 
